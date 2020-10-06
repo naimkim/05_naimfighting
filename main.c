@@ -5,17 +5,25 @@
 
 int main(int argc, char *argv[]) {
 	
-	int i,n;
-	int sum=0;
+	int answer=1013;
+	int trials, a=0;
 	
-	printf("input a number : ");
-	scanf("%i", &n);
+	do 
+	{
+		printf("맞추면 낮잠을 허락한다.\n");
+		scanf("%i",&a);				//조건따지기전 문장
 	
-	for(i=1; i<=n ; i++)
-		sum += i;	//sumation
-		
-	printf("the sum result is %i\n", sum);
-		
+		if (a>= answer)
+			printf("too big!!!!!!");
+		else
+			printf("too low!!!!!!");
+			
+		trials++;
+	}	while ( a != answer);
+	
+	
+	printf("맞았다 이자식 낮잠을 자거라. 너 %d 번 틀렸다 멍청아 ", trials);
+
 	
 	return 0;
 	
